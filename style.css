@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --main:rgba(243, 243, 243, 0.884);
+}
+.body{
+    background-color: var(--main);
+}
+.icons{
+    width: 45px;
+    height: 45px;
+}
+.icons:hover{
+    width: 50px;
+    height: 50px;
+}
+
+.sss{
+    width: 100%;
+    height: 606px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navbar{
+    position: fixed;
+    left: 0px;
+    width: 70px;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    gap: 30px;
+    background-color: rgb(19, 94, 107);
+}
+
+
+
+.upperpart{
+    position: fixed;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.rightside{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.leftside{
+    position: relative;
+    left: 360px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
