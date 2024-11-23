@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="logout" id="logout">
+        <button id="logoutbtn" class="logoutbtn"></button>
+    </div>
     <div class="navbar">
         <img class="icons" src="Icons & Photos/icon1.png" alt="">
         <img class="icons" src="Icons & Photos/icon4.png" alt="">
@@ -21,28 +24,28 @@
     </div>
     <div class="upperpart">
         <div class="upperpart_rightside">
-            <img  id="arrowicons" class="icons_upperpart" src="Icons & Photos/left arrow.png" alt="">
-            <p id="uppertext" class="text">Back To Dashboard</p>
+            <img id="arrowicons" class="icons_upperpart icon" src="Icons & Photos/left arrow.png" alt="">
+            <p id="uppertext" class="text font">Back To Dashboard</p>
         </div>
         <div class="upperpart_leftside">
-            <img class="icons_upperpart" src="Icons & Photos/light.png" alt="">
-            <img style="width: 35px; height: 35px; border-radius: 10px;" src="Icons & Photos/person.jpeg" alt="">
-            <h5 class="text">DR.Alex Hess</h5>
-            <img class="icons_upperpart" src="Icons & Photos/bottom arrow.png" alt="">
+            <img onclick="chabgemode()" id="darkmode" class="icons_upperpart icon" src="Icons & Photos/moon.png" alt="">
+            <img class="icon" style="width: 35px; height: 35px; border-radius: 10px;" src="Icons & Photos/person.jpeg" alt="">
+            <h5 class="text font" >DR.Alex Hess</h5>
+            <img class="icons_upperpart icon" src="Icons & Photos/bottom arrow.png" alt="">
         </div>
     </div>
     <div class="main">
         <div class="main_rightpart">
-            <div class="righpart_firstpart">
-                <img style="width: 100px; height: 100px; border-radius: 10px;" src="Icons & Photos/person.jpeg" alt="">
-                <h5>Roger Curtis</h5>
-                <p>Age: 36</p>
+            <div  class="righpart_firstpart dark">
+                <img class="icon img_input" style="width: 100px; height: 100px; border-radius: 10px;" src="Icons & Photos/person.jpeg" alt="">
+                <h5 class="font">Roger Curtis</h5>
+                <p class="font">Age: 36</p>
                 <label class="input" for="input">Update</label>
-                <input style="display: none;" id="input" type="file">
+                <input onchange="input_file()" style="display: none;" id="input" type="file">
             </div>
-            <div class="rightpart_secondpart">
-                <h2 style="margin-left: 10px;">Information</h2>
-                <table class="table_1">
+            <div  class="rightpart_secondpart dark">
+                <h2 class="font" style="margin-left: 10px;">Information</h2>
+                <table id="table_1" class="table_1">
                     <tr>
                         <td>Gender:</td>
                         <td>Male</td>
@@ -79,60 +82,76 @@
             </div>
         </div>
         <div class="main_leftspart">
-            <div class="leftside_firstpart">
-                <div class="firstpart_items">
-                    <img class="firstpart_img" src="Icons & Photos/heart.png" alt="">
-                    <h5>Heart Rate</h5>
-                    <h3>80 Pbm</h3>
+            <div id="dark" class="leftside_firstpart">
+                <div class="firstpart_items dark">
+                    <img class="firstpart_img icon" src="Icons & Photos/heart.png" alt="">
+                    <h5 class="font">Heart Rate</h5>
+                    <h3 class="font">80 Pbm</h3>
                 </div>
-                <div class="firstpart_items">
-                    <img class="firstpart_img" src="Icons & Photos/temp.jpg" alt="">
-                    <h5>Body Temperature</h5>
-                    <h3>36.5 C</h3>
+                <div class="firstpart_items dark">
+                    <img class="firstpart_img icon" src="Icons & Photos/temp.jpg" alt="">
+                    <h5 class="font">Body Temperature</h5>
+                    <h3 class="font">36.5 C</h3>
                 </div>
-                <div class="firstpart_items">
-                    <img class="firstpart_img" src="Icons & Photos/clocouse.png" alt="">
-                    <h5>Body Temperature</h5>
-                    <h3>100 MG/Dl</h3>
-                </div>
-            </div>
-            <div class="leftside_secondpart">
-                <h2 style="margin-left: 8px;">Test Report</h2>
-                <div class="secondpart_content">
-                    <div class="content_PARTS">
-                        <img class="content_img" src="Icons & Photos/blue list.png" alt="">
-                        <div class="content">
-                            <h5>CT Scan Full-Body</h5>
-                            <p>12th Febraury 2020</p>
-                        </div>
-                    </div>
-                    <div class="content_PARTS">
-                        <img class="content_img" src="Icons & Photos/yellow list.png" alt="">
-                        <div class="content">
-                            <h5>Creatine Kinase T</h5>
-                            <p>12th Febraury 2020</p>
-                        </div>
-                    </div>
-                    <div class="content_PARTS">
-                        <img class="content_img" src="Icons & Photos/red list.png" alt="">
-                        <div class="content">
-                            <h5>Eye Flouriscein Test</h5>
-                            <p>12th Febraury 2020</p>
-                        </div>
-                    </div>
+                <div class="firstpart_items dark">
+                    <img class="firstpart_img icon" src="Icons & Photos/clocouse.png" alt="">
+                    <h5 class="font">Body Temperature</h5>
+                    <h3 class="font">100 MG/Dl</h3>
                 </div>
             </div>
-            <div class="leftpart_thirdpart">
-                <h2 style="margin-left: 8px;">Prescription</h2>
-                <button class="btn_thirdpart">Add a Prescription</button>
-                <table class="table_2">
-                    <thead>
+            <div class="leftside_secondpart dark">
+                <h2 class="font" style="margin-left: 8px;">Test Report</h2>
+                <div class="secondpart_content dark">
+                    <div class="content_PARTS">
+                        <img class="content_img icon" src="Icons & Photos/blue list.png" alt="">
+                        <div class="content">
+                            <h5 class="font">CT Scan Full-Body</h5>
+                            <p class="font">12th Febraury 2020</p>
+                        </div>
+                    </div>
+                    <div class="content_PARTS">
+                        <img class="content_img icon" src="Icons & Photos/yellow list.png" alt="">
+                        <div class="content">
+                            <h5 class="font">Creatine Kinase T</h5>
+                            <p class="font">12th Febraury 2020</p>
+                        </div>
+                    </div>
+                    <div class="content_PARTS">
+                        <img class="content_img icon" src="Icons & Photos/red list.png" alt="">
+                        <div class="content">
+                            <h5 class="font">Eye Flouriscein Test</h5>
+                            <p class="font">12th Febraury 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popupOverlay" style="display: none;"></div> 
+            <div class="popup" id="popup">
+                <h5 class="popuph2">add a Prescription</h5>
+                <input class="inputpopup" type="text" name="" id="input1" placeholder="Enter Prescription">
+                <input id="input2" class="inputpopup" type="date" placeholder="Enter Data">
+                <div>
+                    <input id="input3" class="inputpopup" type="number" placeholder="Entre DUration">
+                    <select  class="option" name="" id="options">
+                        <option value="Day">Day</option>
+                        <option value="Weak">Weak</option>
+                        <option value="Month">Month</option>
+                        <option value="Year">Year</option>
+                    </select>
+                </div>
+                <button  id="closepopup" class="popupbtn">add</button>
+            </div>
+            <div class="leftpart_thirdpart dark">
+                <h2 class="font" style="margin-left: 8px;">Prescription</h2>
+                <button  id="openpopup" class="btn_thirdpart">Add a Prescription</button>
+                <table id="table_row" class="table_2">
+                    <tbody>
                         <tr>
                             <th>Prescription</th>
                             <th>Date</th>
                             <th>Duration</th>
-                        </tr>
-                    </thead>
+                            </tr>
+                    </tbody>
                 </table>
             </div>            
             </div>

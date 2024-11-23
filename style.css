@@ -7,6 +7,8 @@
     --main:rgba(243, 243, 243, 0.884);
     --second:white;
     --font: "Roboto", sans-serif;
+    --darkmodemain:#010409;
+    --darkmodesecond:#0A3069;
 }
 body{
     background-color: var(--main);
@@ -40,6 +42,17 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+th, td {
+    text-align: left;
 }
 
 
@@ -191,6 +204,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
 }
 .table_1{
     width: 346px;
@@ -328,3 +342,132 @@ body{
     padding: 20px;
 }
 
+
+.popup{
+    width: 350px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0px 30px 60px;
+    background-color: #010409;
+    color: #333;
+    visibility: hidden;
+    gap: 10px;
+    display: none;
+    position: fixed;
+    padding: 20px;
+    z-index: 1000;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.close-popup{
+    visibility: hidden;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.popuph2{
+    font-size: 20px;
+    margin: 30px 0 10px;
+}
+.popupbtn{
+    width: 197px;
+    height: 40px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border: 0px;
+    outline: none;
+    border-radius: 4px;
+}
+.inputpopup{
+    width: 197px;
+    height: 32px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+.option{
+    height: 32px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+
+
+.table_2 tr:nth-last-of-type(even) {
+    background-color: black;
+    color: white; 
+}
+
+#popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+}
+
+.logout{
+    width: 200px;
+    height: 100px;
+    background-color: #010409;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    left: 74%;
+    z-index: 1000;
+}
+.openlogout{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.closelogout{
+    visibility: hidden;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.logoutbtn{
+    width: 100px;
+    height: 50px;
+    background-color: wheat;
+
+}
+    
