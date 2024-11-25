@@ -302,7 +302,6 @@ th, td {
 
 .leftpart_thirdpart{
     width: 672px;
-    height: 325px;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
@@ -353,10 +352,10 @@ th, td {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 0px 30px 60px;
-    background-color: #010409;
-    color: #333;
-    visibility: hidden;
-    gap: 10px;
+    background-color: #222;
+    color: white;
+    display: none;
+    gap: 50px;
     display: none;
     position: fixed;
     padding: 20px;
@@ -366,14 +365,15 @@ th, td {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 10px;
 }
 .close-popup{
-    visibility: hidden;
+    display: none;    
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -385,21 +385,35 @@ th, td {
 .popuph2{
     font-size: 20px;
     margin: 30px 0 10px;
+    color: #0f0;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 .popupbtn{
     width: 197px;
     height: 40px;
-    background-color: rgb(255, 0, 0);
-    color: #fff;
+    background-color: #0f0;
+    color: black;
     border: 0px;
     outline: none;
     border-radius: 4px;
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+
 }
 .inputpopup{
-    width: 197px;
-    height: 32px;
+    width: 300px;
+    height: 50px;
+    background-color: #333;
     border-radius: 10px;
     border: none;
+    outline: none;
+    color: #fff;
+    padding-left: 10px;
+}
+.popupitems{
+    margin: 10px;
 }
 
 
@@ -431,23 +445,23 @@ th, td {
 .logout{
     width: 200px;
     height: 100px;
-    background-color: #010409;
+    background-color: #333;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 10%;
     left: 74%;
-    z-index: 1000;
+    z-index: 1001;
 }
 .openlogout{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    top: 10%;
+    left: 74%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,9 +469,9 @@ th, td {
     gap: 20px;
 }
 .closelogout{
-    visibility: hidden;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: none;
+    top: 10%;
+    left: 74%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -467,7 +481,14 @@ th, td {
 .logoutbtn{
     width: 100px;
     height: 50px;
-    background-color: wheat;
-
+    background-color: #0f0;
+    color: black;
+    margin: 24px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 0px;
+}
+.logoutbtn:hover{
+    background-color: gray;
 }
     

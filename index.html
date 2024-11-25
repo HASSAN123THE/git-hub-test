@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="logout" id="logout">
-        <button id="logoutbtn" class="logoutbtn"></button>
+        <button id="logoutbtn" class="logoutbtn">Logout</button>
     </div>
     <div class="navbar">
         <img class="icons" src="Icons & Photos/icon1.png" alt="">
@@ -27,11 +27,11 @@
             <img id="arrowicons" class="icons_upperpart icon" src="Icons & Photos/left arrow.png" alt="">
             <p id="uppertext" class="text font">Back To Dashboard</p>
         </div>
-        <div class="upperpart_leftside">
+        <div id="upperpart_leftside" class="upperpart_leftside">
             <img onclick="chabgemode()" id="darkmode" class="icons_upperpart icon" src="Icons & Photos/moon.png" alt="">
             <img class="icon" style="width: 35px; height: 35px; border-radius: 10px;" src="Icons & Photos/person.jpeg" alt="">
             <h5 class="text font" >DR.Alex Hess</h5>
-            <img class="icons_upperpart icon" src="Icons & Photos/bottom arrow.png" alt="">
+            <img id="btnarrow" class="icons_upperpart icon" src="Icons & Photos/bottom arrow.png" alt="">
         </div>
     </div>
     <div class="main">
@@ -127,19 +127,19 @@
             </div>
             <div id="popupOverlay" style="display: none;"></div> 
             <div class="popup" id="popup">
-                <h5 class="popuph2">add a Prescription</h5>
-                <input class="inputpopup" type="text" name="" id="input1" placeholder="Enter Prescription">
-                <input id="input2" class="inputpopup" type="date" placeholder="Enter Data">
+                <h5 class="popuph2 popupitems">add a Prescription</h5>
+                <input  class="inputpopup popupitems" type="text" name="" id="input1" placeholder="Enter Prescription">
+                <input id="input2" class="inputpopup popupitems" type="date" placeholder="Enter Data">
                 <div>
-                    <input id="input3" class="inputpopup" type="number" placeholder="Entre DUration">
-                    <select  class="option" name="" id="options">
+                    <input id="input3" class="inputpopup popupitems" type="number" placeholder="Entre DUration">
+                    <select  class="option popupitems" name="" id="options">
                         <option value="Day">Day</option>
                         <option value="Weak">Weak</option>
                         <option value="Month">Month</option>
                         <option value="Year">Year</option>
                     </select>
                 </div>
-                <button  id="closepopup" class="popupbtn">add</button>
+                <button  id="closepopup" class="popupbtn popupitems">add</button>
             </div>
             <div class="leftpart_thirdpart dark">
                 <h2 class="font" style="margin-left: 8px;">Prescription</h2>

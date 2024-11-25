@@ -134,19 +134,31 @@ btn.addEventListener("click", createRow);
 //___________________________________________________________________________________________________________________
 
 
-//let logout = document.getElementById("logout");
-//let logoutimg = document.getElementById("arrowicons");
-//let logoutbtn = document.getElementById("logoutbtn"); 
-//
-//logoutimg.addEventListener("click", () => {
-//    logout.classList.add('openlogout');
-//    popupOverlay.style.display = "block"; 
-//});
-//
-//function closeLogout() {
-//    logout.classList.remove('closelogout'); 
-//    popupOverlay.style.display = "none";  
-//}
-//
-//logoutbtn.addEventListener("click", closeLogout);
-//popupOverlay.addEventListener("click", closeLogout); 
+let logout = document.getElementById("logout");
+let logoutimg = document.getElementById("btnarrow");
+let logoutbtn = document.getElementById("logoutbtn");
+
+console.log(logout);
+console.log(logoutbtn);
+console.log(logoutimg);
+
+logoutimg.addEventListener("click", () => {
+    logout.style.display = "block"; 
+    popupOverlay.style.display = "block";
+});
+
+function closeLogout() {
+    logout.style.display = "none"; 
+    popupOverlay.style.display = "none";
+}
+
+logoutbtn.addEventListener("click", closeLogout);
+popupOverlay.addEventListener("click", closeLogout);
+
+
+
+function changepage() {
+    window.location.href = "login.html"; 
+}
+logoutbtn.addEventListener("click", changepage);
+
